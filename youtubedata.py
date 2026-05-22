@@ -6,7 +6,7 @@ import streamlit as st
 
 #API KEY Connection
 def api_connect():
-    api_id="AIzaSyD2cgveWIoseVn-kEvlBMaG7uesc_NloYM"
+    api_id="<API id got from googleapiclient>"
     api_service_code="youtube"
     api_version="v3"
 
@@ -151,7 +151,7 @@ def get_playlist_details(channel_id):
         return All_data
 
 #MongoDB Connection
-client=pymongo.MongoClient("mongodb+srv://bargavi:Srinidhi%401126@cluster0.fausrjk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+client=pymongo.MongoClient("mongodb+srv://<username>:<password>@cluster0.fausrjk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 db= client["youtube_data"]
 
 # channel Table creation details
@@ -174,8 +174,8 @@ def channel_table(channel_name_s):
     mydb = psycopg2.connect(
         host="localhost",
         user="postgres",
-        password="Sri@1126",
-        database="youtube_data",
+        password="<password>",
+        database="<database name>",
         port="5432",
     )
     cursor = mydb.cursor()
@@ -235,8 +235,8 @@ def playlist_table(channel_name_s):
     mydb = psycopg2.connect(
         host="localhost",
         user="postgres",
-        password="Sri@1126",
-        database="youtube_data",
+        password="<password>",
+        database="<database name>",
         port="5432",
     )
     cursor = mydb.cursor()
@@ -289,8 +289,8 @@ def videos_table(channel_name_s):
     mydb = psycopg2.connect(
         host="localhost",
         user="postgres",
-        password="Sri@1126",
-        database="youtube_data",
+        password="<password>",
+        database="<database name>",
         port="5432",
     )
     cursor = mydb.cursor()
@@ -369,8 +369,8 @@ def comment_table(channel_name_s):
     mydb = psycopg2.connect(
         host="localhost",
         user="postgres",
-        password="Sri@1126",
-        database="youtube_data",
+        password="<password>",
+        database="<database name>",
         port="5432",
     )
     cursor = mydb.cursor()
